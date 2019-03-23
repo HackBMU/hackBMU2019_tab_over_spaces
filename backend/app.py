@@ -23,7 +23,7 @@ def prep_model(model_name='sketch'):
     Ensure model is prepped and ready to use
     '''
     if model_name == 'sketch':
-        model = 'lel'
+        model = Sampler(model_json_path='model/bin/model_json.json', model_weights_path='model/bin/weights.h5')
     elif model_name == 'image':
         model = 'lwl'
     else:

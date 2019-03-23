@@ -1,6 +1,7 @@
 from app import *
 from flask import session, redirect, url_for, render_template, abort, request, flash, send_from_directory
 import os
+#from models import Projects
 
 
 @app.route('/models/<model_name>', methods=['GET', 'POST'])
@@ -27,6 +28,11 @@ def generate(model_name):
     else:
         return render_template('generator_page.html')
 
+
+@app.route('/', methods=['GET'])
+def index():
+    pass
+    #return Projects.query
 
 @app.route('/output/<path:path>')
 def generated(path):

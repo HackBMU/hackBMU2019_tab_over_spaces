@@ -31,9 +31,12 @@ class User(db.Model):
 class Projects(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    model_name = db.Column(db.UnicodeText)
+    html_code = db.Column(db.UnicodeText)
 
-    def __init__(self, user_id):
+    def __init__(self, user_id, model_name='None'):
         self.user_id = user_id
+        self.model_name = model_name
 
     def __repr__(self):
         return '<Lottery Ticket %r belonging to %r>' % (self.id, self.user.full_name)

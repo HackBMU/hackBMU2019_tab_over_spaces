@@ -1,7 +1,7 @@
 from app import *
-from flask import session, redirect, url_for, render_template, abort, request, flash, send_from_directory
+from flask import session, redirect, url_for, render_template, abort, request, flash, send_from_directory, jsonify
 import os
-#from models import Projects
+from models import Projects
 
 
 @app.route('/models/<model_name>', methods=['GET', 'POST'])
@@ -24,15 +24,14 @@ def generate(model_name):
             file.save(file_address)
             output_folder = os.path.join(os.getcwd(), app.config['OUTPUT_FOLDER'])
             html = model.convert_single_image(output_folder, png_path=file_address, print_generated_output=0, get_sentence_bleu=0, original_gui_filepath=None, style='default')
-            return html
+            return jsonify({'html': html})
     else:
         return render_template('generator_page.html')
 
 
 @app.route('/', methods=['GET'])
 def index():
-    pass
-    #return Projects.query
+    return Projects.query.all()
 
 @app.route('/output/<path:path>')
 def generated(path):

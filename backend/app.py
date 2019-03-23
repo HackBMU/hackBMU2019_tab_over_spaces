@@ -30,8 +30,8 @@ def prep_model(model_name='sketch'):
         raise Exception
     return model
 
-from models import *
 from views import *
+from models import *
 
 db.create_all()
 

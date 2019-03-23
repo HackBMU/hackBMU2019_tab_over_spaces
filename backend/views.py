@@ -28,6 +28,10 @@ def generate(model_name):
     else:
         return render_template('generator_page.html')
 
+@app.route('/project/<id>')
+def get_project(id):
+    return Projects.get_project_by_id(id)
+
 
 @app.route('/dashboard', methods=['GET'])
 def index():

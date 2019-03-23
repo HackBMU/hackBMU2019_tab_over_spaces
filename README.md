@@ -14,9 +14,13 @@ The twenty-first century digital world enabled mobile, empowered, content-hungry
 
 # Problem Statement
 
-**With this massive ongoing transformation where more and more users are joining the internet**
+With this massive ongoing transition where businesses are now moving to their virtual addresses, a lot of problems were to occur. We'll be tackling these problems: 
+
+1. 
 
 # Solution
+
+![5-Click Model]()
 
 # Technology Stack
 * *React* A JavaScript library for building user interfaces

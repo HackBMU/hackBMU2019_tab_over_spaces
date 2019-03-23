@@ -20,7 +20,7 @@ With this massive ongoing transition where businesses are now moving to their vi
 
 # Solution
 
-![5-Click Model]()
+![5-Click Model](/img/steps.jpg)
 
 # Technology Stack
 * *React* A JavaScript library for building user interfaces

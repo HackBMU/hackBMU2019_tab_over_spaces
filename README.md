@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Introduction
 
-## Available Scripts
+### Everyone is Moving Online
 
-In the project directory, you can run:
+The twenty-first century digital world enabled mobile, empowered, content-hungry individuals to capture the value of enabling technologies and applications to manage, create, share, and influence content across the creation and delivery spectrum. Users were online in record numbers, spending a greater percentage of their time, and conducting more and more activities including communications, learning, entertainment, and social interaction. Digital technologies and broadband radically revolutionized the value equation for many industries, giving more influence and power to the individual. 
 
-### `npm start`
+**Businesses are now not just limited to physical addresses but are now moving towards virtual addresses on the internet. These virtual addresses are nothing but the web applications.**
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Why are Web Applications are Now More Relevant Than Ever?
+1. Internet Economy is growing at a massive rate - _9% of USA's GDP comes from the Internet Economy_
+2. Web applications are the modern day combination of commercial store and billboards open 24/7 - _93% of business purchase decisions begin with a search engine search_
+3. Businesses with effective web applications have significant advantage over their competitors with no or relatively less developed web applications - _85% of the customers of a product use the internet to check validity of a business_
+4. Web applications open new horizons - _For every job destroyed by the internet 2.6 new jobs are created_
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+# Problem Statement
 
-### `npm test`
+**With this massive ongoing transformation where more and more users are joining the internet**
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Solution
 
-### `npm run build`
+# Technology Stack
+* *React* A JavaScript library for building user interfaces
+* *Flask* Python's micro web framework.
+* *MySQL* MySQL is an open source relational database management system.
+* *Keras* The Python Deep Learning library 
+* *Heroku* A platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+* *FloydHub* A zero setup Deep Learning platform for productive data science teams.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

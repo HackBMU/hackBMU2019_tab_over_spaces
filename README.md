@@ -21,7 +21,7 @@ The twenty-first century digital world enabled mobile, empowered, content-hungry
 # Technology Stack
 * *React* A JavaScript library for building user interfaces
 * *Flask* Python's micro web framework.
-* *MySQL* MySQL is an open source relational database management system.
+* *Postgresql*  An open source object-relational database management system with an emphasis on extensibility and standards compliance.
 * *Keras* The Python Deep Learning library 
 * *Heroku* A platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 * *FloydHub* A zero setup Deep Learning platform for productive data science teams.

@@ -33,10 +33,15 @@ class Projects(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     model_name = db.Column(db.UnicodeText)
     html_code = db.Column(db.UnicodeText)
+    screenshot_path = db.Column(db.UnicodeText)
+
+    @staticmethod
+    def get_project_by_id(id):
+        return Projects.query.filter_by(id=id).first()
 
     def __init__(self, user_id, model_name='None'):
         self.user_id = user_id
         self.model_name = model_name
 
     def __repr__(self):
-        return '<Lottery Ticket %r belonging to %r>' % (self.id, self.user.full_name)
+        return '<Project %r belonging to %r>' % (self.id, self.user.full_name)

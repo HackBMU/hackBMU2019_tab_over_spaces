@@ -29,7 +29,7 @@ def generate(model_name):
         return render_template('generator_page.html')
 
 
-@app.route('/', methods=['GET'])
+@app.route('/dashboard', methods=['GET'])
 def index():
     return Projects.query.all()
 
@@ -44,3 +44,4 @@ def uploaded(path):
 @app.route('/static/<path:path>')
 def staticpath(path):
     return send_from_directory('static', path)
+

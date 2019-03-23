@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './base.css';
 import image from './image.jpg'
-
+import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router'
 
 class Login extends Component {
 
@@ -14,7 +15,7 @@ class Login extends Component {
     }
 
     handleClick(event){
-        console.log("Reached here")
+        console.log("Reached here");
         // var apiBaseUrl = "http://localhost:4000/api/";
         // var self = this;
         // var payload={
@@ -71,8 +72,8 @@ class Login extends Component {
 						</div>
 					</div>
 					<div className="form__item form__item--actions">
-						<span>Don't have an account? <a className="form__link" href="#">Register here</a></span>
-						<input className="form__button" type="button" onClick={(event) => this.handleClick(event)} name="signin" value="Login" />
+						<span>Don't have an account? <Link className="form__link" to="/register">Register here</Link></span>
+						<Link className="form__button" type="button" to = "/" name="signin" value="Login">Login</Link>
 					</div>
 			
 			</div>

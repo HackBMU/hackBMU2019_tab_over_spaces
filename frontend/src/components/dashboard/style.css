@@ -1,0 +1,276 @@
+/* Primary Styles */
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Montserrat',sans-serif;
+   font-size: 1em;
+background: #ebebeb;
+   color: #333;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+em {
+   font-style: normal;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+} 
+
+/* Layout */
+.s-layout {
+   display: flex;
+   width: 100%;
+   min-height: 100vh;
+}
+
+.s-layout__content {
+   display: flex;
+    padding: 40px;
+    padding-left: 70px;
+   flex: 1;
+}
+
+/* Sidebar */
+.s-sidebar__trigger {
+   z-index: 2;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 4em;
+   background: #192b3c;
+}
+
+.s-sidebar__trigger > i {
+   display: inline-block;
+   margin: 1.5em 0 0 1.5em;
+   color: #f07ab0;
+}
+
+.s-sidebar__nav {
+   position: fixed;
+    
+   top: 0;
+   left: -15em;
+   overflow: hidden;
+   transition: all .3s ease-in;
+   width: 200px;
+   height: 100%;
+   background: #fff;
+     box-shadow: 0px 0px 60px rgba(0,0,30,0.2);
+   color: #000;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.s-sidebar__nav:hover,
+.s-sidebar__nav:focus,
+.s-sidebar__trigger:focus + .s-sidebar__nav,
+.s-sidebar__trigger:hover + .s-sidebar__nav {
+   left: 0;
+}
+
+.s-sidebar__nav ul {
+   position: absolute;
+   top: 10em;
+   left: 0;
+   margin: 0;
+   padding: 40px;
+   width: 15em;
+}
+
+.s-sidebar__nav ul li {
+   width: 100%;
+}
+
+.s-sidebar__nav-link {
+   position: relative;
+   display: inline-block;
+   width: 100%;
+   height: 4em;
+}
+
+.s-sidebar__nav-link em {
+   position: absolute;
+   top: 50%;
+   left: 5em;
+   transform: translateY(-50%);
+}
+
+.s-sidebar__nav-link:hover {
+   background: #fff;
+}
+
+.s-sidebar__nav-link > i {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: inline-block;
+   width: 4em;
+   height: 4em;
+}
+
+.s-sidebar__nav-link > i::before {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+/* Mobile First */
+@media (min-width: 42em) {
+   .s-layout__content {
+      margin-left: 4em;
+   }
+   
+   /* Sidebar */
+   .s-sidebar__trigger {
+      width: 4em;
+   }
+   
+   .s-sidebar__nav {
+      width: 4em;
+      left: 0;
+   }
+   
+   .s-sidebar__nav:hover,
+   .s-sidebar__nav:focus,
+   .s-sidebar__trigger:hover + .s-sidebar__nav,
+   .s-sidebar__trigger:focus + .s-sidebar__nav {
+      width: 22em;
+   }
+}
+
+@media (min-width: 68em) {
+   .s-layout__content {
+      margin-left: 15em;
+   }
+   
+   /* Sidebar */
+   .s-sidebar__trigger {
+      display: none
+   }
+   
+   .s-sidebar__nav {
+      width: 22em;
+   }
+   
+   .s-sidebar__nav ul {
+      top: 20.3em;
+   }
+}
+
+.s-sidebar__nav h1{
+    font-weight: bolder;
+    font-size: 30px;
+    margin-left: 40px;
+    top: 150px;
+    position: absolute;
+    
+}
+#underliner {
+    height: 20px;
+    position: relative;
+    display: inline-block;
+    background-color: aqua;
+    width: 40px
+}
+.s-sidebar__nav button {
+    position: absolute;
+    top: 650px;
+    padding: 10px 30px;
+    font-weight: 400;
+    color: aqua;
+    letter-spacing: 2px;
+    margin: auto 3em;
+}
+
+.unde {
+    width: 40px;
+    height: 2px;
+    background-color:aqua;
+    position: relative;
+    left: 60px;
+    top: -17px;
+}
+
+.dash_contain p{
+    font-size: 12px;
+}
+.dash_contain h1 {
+    font-weight: bolder;
+    font-size: 30px;
+}
+.dash_contain {
+    width: 80vw;
+    
+}
+.grid {
+  margin: 0 auto; /* centered */
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+    display: inline;
+  float: left;
+  width: 300px;
+  height: 300px;
+    padding: 15px;
+}
+
+.grid-item--height2 { height: 800px; }
+
+#content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 18px 30px rgba(0,0,30,0.4);
+    padding: 30px 30px 0px 20px;
+    color: white;
+    
+}
+#content h1 {
+    position: absolute;
+    width: 335px;
+    bottom: 20px;
+    font-size: 18px;
+    line-height: 22px;
+}
+#content button {
+    position: absolute;
+    top:320px;
+    left:250px;
+}
+.grid-item--height3 { height: 1200px;}
+.grid-item--width3 {width: 1200px;}
+.grid-item--width2 {width: 800px;}
+
+
+.grad {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    display: inline;
+    bottom: 0px;
+    left: -0px;
+    background-image: linear-gradient(to bottom, rgba(25,20,90,0),rgba(25,20,90,0.9), rgba(25,20,90,1))
+}

@@ -37,7 +37,7 @@ New Website Creation and Deployment Steps:
 
 **Step 5:** Website can be deployed by the user in a single click using third-party choices provided by us for. 
 
-##Features
+## Features
 1. Create and deploy new website.
 2. Edit existing website.
 

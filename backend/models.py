@@ -34,6 +34,7 @@ class Projects(db.Model):
     model_name = db.Column(db.UnicodeText)
     html_code = db.Column(db.UnicodeText)
     screenshot_path = db.Column(db.UnicodeText)
+    deploy_url = db.Column(db.UnicodeText)
 
     @staticmethod
     def get_project_by_id(id):

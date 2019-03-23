@@ -23,7 +23,7 @@ With this massive ongoing transition where businesses are now moving to their vi
 
 We'll be creating **5-click model** web application using which every user (regardless of the amount of technical knowledge they possess) right from a **ten year old to sixty five year old** can create and deploy a website - which looks exactly like they envisioned it to be - in matter of minutes. The same would be achieved using the following following 5 steps:
 
-![5-Click Model](/img/steps.jpg)
+![5-Click Model](frontend/img/steps.jpg)
 
 New Website Creation and Deployment Steps:
 

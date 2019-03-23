@@ -14,9 +14,10 @@ The twenty-first century digital world enabled mobile, empowered, content-hungry
 
 # Problem Statement
 
-With this massive ongoing transition where businesses are now moving to their virtual addresses, a lot of problems were to occur. We'll be tackling these problems: 
+With this massive ongoing transition where businesses are now moving to their virtual addresses, a lot of problems were bound to occur. We'll be tackling some these problems using our application: 
 
-1. 
+1. Difficulty faced by small/ medium businesses and inviduals to create website to 
+2.
 
 # Solution
 

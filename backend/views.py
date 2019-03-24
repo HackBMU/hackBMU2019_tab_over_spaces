@@ -2,6 +2,7 @@ from app import *
 from flask import session, redirect, url_for, render_template, abort, request, flash, send_from_directory, jsonify
 import os
 from models import Projects
+from keras import backend as K
 
 
 @app.route('/models/<model_name>', methods=['GET', 'POST'])
@@ -31,6 +32,7 @@ def generate(model_name):
             project.deploy_url = f'localhost:5000/deploy/{project_id}'
             db.session.add(project)
             db.session.commit()
+            K.clear_session()
             return get_project(project_id)
     else:
         return render_template('generator_page.html')

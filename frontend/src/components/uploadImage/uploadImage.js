@@ -2,6 +2,7 @@ import React from 'react'
 import Editor from '../FroalaEditor/froala'
 import Select from 'react-select';
 import JSON from './dump.json'
+
 const axios = require("axios");
 
 const options = [
@@ -21,7 +22,8 @@ class ReactUploadImage extends React.Component {
             html : null,
             title : '',
             selectedOption: '',
-            clickDeploy : ''
+            clickDeploy : '',
+            userId : ''
         };
         this.onFormSubmit = this.onFormSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -42,16 +44,15 @@ class ReactUploadImage extends React.Component {
             }
         };
     
-        axios.post("http://localhost:5000/project", formData)
-            .then((response) => {
-                console.log(response.data.html_code)
-                const temp = response.data.html_code
-                this.setState({html : temp, clickDeploy: response.data.deploy_url })
-            }).catch((error) => {
-                console.log(error)
-        });
-
-        this.setState({html : temp})
+        // axios.post("http://localhost:5000/project", formData)
+        //     .then((response) => {
+        //         console.log(response.data.html_code)
+        //         const temp = response.data.html_code
+        //         this.setState({html : temp, clickDeploy: response.data.deploy_url, userId: response.data.id })
+        //     }).catch((error) => {
+        //         console.log(error)
+        // });
+        this.setState({html : "this is my html file", clickDeploy: "deploymentlink", userId: "8" })
    }
     onChange(e) {
         this.setState({file:e.target.files[0]});
@@ -71,12 +72,12 @@ class ReactUploadImage extends React.Component {
         const { selectedOption } = this.state;
 
         return (
-             this.state.html ? <Editor html = {this.state.html} link = {this.state.clickDeploy} /> : <form onSubmit={this.onFormSubmit}>
+             this.state.html ? <Editor html = {this.state.html} userId = {this.state.userId} link = {this.state.clickDeploy} /> : <form onSubmit={this.onFormSubmit}>
                 <h1>Title</h1>
                 <input type="text" name="myTitle" onChange= {this.handleProjectName} />
                 <h1>Theme</h1>
                 <Select
-                     value={selectedOption}
+                    value={selectedOption}
                     onChange={this.handleStyleChange}
                     options={options}
                 />

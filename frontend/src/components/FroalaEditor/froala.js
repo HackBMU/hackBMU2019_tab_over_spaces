@@ -9,8 +9,8 @@ class Froala extends React.Component {
   render() {
     return (
       <div className="App">
-         <Editor html = {this.props.html} />
-         <a href= {this.props.link} >One Click Deploy</a>
+          <a href= {this.props.link}>One Click Deploy</a>
+         <Editor html = {this.props.html} userId = {this.props.userId} />
       </div>
     );
   }

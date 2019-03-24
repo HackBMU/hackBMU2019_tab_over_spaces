@@ -6,7 +6,7 @@ import uploadImage from './components/uploadImage/uploadImage';
 import Login from './components/login/login';
 import Register from './components/register/register'
 import Dashboard from './components/dashboard/dashboard'
-import CreateWebsite from './components/stepper/stepper'
+import CreateWebsite from './components/createWebsite/createWebsite'
 
 class App extends Component {
   render() {

@@ -21,6 +21,8 @@ flask = "*"
 flask-sqlalchemy = "*"
 psycopg2-binary = "*"
 pymysql = "*"
+sqlalchemy-serializer = "*"
+pdfcrowd = "*"
 
 [requires]
 python_version = "3.6"

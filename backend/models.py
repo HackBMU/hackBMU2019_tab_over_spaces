@@ -1,7 +1,8 @@
 from app import db
+from sqlalchemy_serializer import SerializerMixin
 
 
-class User(db.Model):
+class User(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     full_name = db.Column(db.UnicodeText)
     email_id = db.Column(db.UnicodeText)
@@ -28,7 +29,7 @@ class User(db.Model):
         return '<User %r>' % self.full_name
 
 
-class Projects(db.Model):
+class Projects(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     model_name = db.Column(db.UnicodeText)
@@ -40,8 +41,7 @@ class Projects(db.Model):
     def get_project_by_id(id):
         return Projects.query.filter_by(id=id).first()
 
-    def __init__(self, user_id, model_name='None'):
-        self.user_id = user_id
+    def __init__(self, model_name='None'):
         self.model_name = model_name
 
     def __repr__(self):

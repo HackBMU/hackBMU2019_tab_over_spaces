@@ -10,6 +10,7 @@ BASE_DIR_NAME = os.path.dirname(__file__)
 DEFAULT_DSL_MAPPING_FILEPATH = "{}/styles/default-dsl-mapping.json".format(BASE_DIR_NAME)
 FACEBOOK_DSL_MAPPING_FILEPATH = "{}/styles/facebook_dsl_mapping.json".format(BASE_DIR_NAME)
 AIRBNB_DSL_MAPPING_FILEPATH = "{}/styles/airbnb_dsl_mapping.json".format(BASE_DIR_NAME)
+WEBASE_DSL_MAPPING_FILEPATH = "{}/styles/webase_dsl_mapping.json".format(BASE_DIR_NAME)
 
 
 class Compiler:
@@ -31,6 +32,8 @@ class Compiler:
             return FACEBOOK_DSL_MAPPING_FILEPATH
         elif style == 'airbnb':
             return AIRBNB_DSL_MAPPING_FILEPATH
+        elif style == 'webase':
+            return WEBASE_DSL_MAPPING_FILEPATH
 
     def compile(self, generated_gui):
         dsl_file = generated_gui

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "089b5c5997b688f90f89d5725364864efa0d601d61759f7f3d14512ad5df3041"
+            "sha256": "77b2068f3b355f386824dfc3a1ff04cb9cf479613734a4852bd45e000d4395cf"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -253,6 +253,13 @@
             "index": "pypi",
             "version": "==3.3.0.10"
         },
+        "pdfcrowd": {
+            "hashes": [
+                "sha256:0f2ed78176b5a9d52c3ee6de245c564939643937ad24ad60770b51255626b385"
+            ],
+            "index": "pypi",
+            "version": "==4.7.0"
+        },
         "pillow": {
             "hashes": [
                 "sha256:0e3b56364a2c772c961a8faad8a835d3f24d8848310de035c9e07cc006035cbc",
@@ -431,6 +438,13 @@
                 "sha256:781fb7b9d194ed3fc596b8f0dd4623ff160e3e825dd8c15472376a438c19598b"
             ],
             "version": "==1.3.1"
+        },
+        "sqlalchemy-serializer": {
+            "hashes": [
+                "sha256:12ef053adb6eb4f9dd92b789d9839a015c0f553a180aad1a2c0e7b9d9e1d5dfa"
+            ],
+            "index": "pypi",
+            "version": "==1.1"
         },
         "tensorflow": {
             "hashes": [

@@ -51,7 +51,7 @@ class ReactUploadImage extends React.Component {
                 console.log(error)
         });
 
-        this.setState({html : "Hello"})
+        this.setState({html : temp})
    }
     onChange(e) {
         this.setState({file:e.target.files[0]});

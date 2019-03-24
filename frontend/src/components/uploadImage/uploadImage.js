@@ -1,6 +1,7 @@
 import React from 'react'
 import Editor from '../FroalaEditor/froala'
 import Select from 'react-select';
+import JSON from './dump.json'
 const axios = require("axios");
 
 const options = [
@@ -19,7 +20,8 @@ class ReactUploadImage extends React.Component {
             file: null,
             html : null,
             title : '',
-            selectedOption: null,
+            selectedOption: '',
+            clickDeploy : ''
         };
         this.onFormSubmit = this.onFormSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -33,7 +35,7 @@ class ReactUploadImage extends React.Component {
         const formData = new FormData();
         formData.append('file', this.state.file);
         formData.append('project_name', this.state.title);
-        formData.append('style', this.state.selectedOption);
+        formData.append('style', this.state.selectedOption.value);
         const config = {
             headers: {
                 'content-type': 'multipart/form-data'
@@ -42,20 +44,22 @@ class ReactUploadImage extends React.Component {
     
         axios.post("http://localhost:5000/project", formData)
             .then((response) => {
-                console.log(response.data.html_code)
-                const temp = response.data.html_code
-                this.setState({html : temp})
+                console.log(response.data.html)
+                const temp = response.data.html
+                this.setState({html : temp, clickDeploy: response.data.deploy_url })
             }).catch((error) => {
                 console.log(error)
         });
+
+        this.setState({html : "Hello"})
    }
     onChange(e) {
         this.setState({file:e.target.files[0]});
     }
 
     handleStyleChange = (selectedOption) => {
-        console.log(selectedOption.value)
-        this.setState({ selectedOption : selectedOption.value });
+        this.setState({ selectedOption });
+        console.log(`Option selected:`, selectedOption);
     }
 
     handleProjectName = (event) => {
@@ -67,12 +71,12 @@ class ReactUploadImage extends React.Component {
         const { selectedOption } = this.state;
 
         return (
-            this.state.html ? <Editor html = {this.state.html} /> : <form onSubmit={this.onFormSubmit}>
+             this.state.html ? <Editor html = {this.state.html} link = {this.state.clickDeploy} /> : <form onSubmit={this.onFormSubmit}>
                 <h1>Title</h1>
                 <input type="text" name="myTitle" onChange= {this.handleProjectName} />
                 <h1>Theme</h1>
                 <Select
-                    value={selectedOption}
+                     value={selectedOption}
                     onChange={this.handleStyleChange}
                     options={options}
                 />

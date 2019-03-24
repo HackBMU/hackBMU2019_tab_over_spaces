@@ -13,7 +13,6 @@ body {
 	background-color: #fff;
 	background-color: var(--color-bg);
 	height: 100vh;
-	overflow: hidden;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

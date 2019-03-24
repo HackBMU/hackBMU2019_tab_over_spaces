@@ -44,15 +44,15 @@ class ReactUploadImage extends React.Component {
             }
         };
     
-        // axios.post("http://localhost:5000/project", formData)
-        //     .then((response) => {
-        //         console.log(response.data.html_code)
-        //         const temp = response.data.html_code
-        //         this.setState({html : temp, clickDeploy: response.data.deploy_url, userId: response.data.id })
-        //     }).catch((error) => {
-        //         console.log(error)
-        // });
-        this.setState({html : "this is my html file", clickDeploy: "deploymentlink", userId: "8" })
+        axios.post("http://localhost:5000/project", formData)
+            .then((response) => {
+                console.log(response.data.html_code)
+                const temp = response.data.html_code
+                this.setState({html : temp, clickDeploy: response.data.deploy_url, userId: response.data.id })
+            }).catch((error) => {
+                console.log(error)
+        });
+      
    }
     onChange(e) {
         this.setState({file:e.target.files[0]});

@@ -23,6 +23,7 @@ psycopg2-binary = "*"
 pymysql = "*"
 sqlalchemy-serializer = "*"
 pdfcrowd = "*"
+flask-cors = "*"
 
 [requires]
 python_version = "3.6"

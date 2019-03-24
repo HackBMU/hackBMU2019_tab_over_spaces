@@ -2,10 +2,12 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 import os
+from flask_cors import CORS
 from model.src.classes.inference.Sampler import *
 
 
 app = Flask(__name__)
+CORS(app)
 app.config['UPLOAD_FOLDER'] = 'upload'
 app.config['OUTPUT_FOLDER'] = 'output'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

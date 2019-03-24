@@ -40,10 +40,10 @@ class ReactUploadImage extends React.Component {
             }
         };
     
-        axios.post("http://localhost:5000/projects", formData)
+        axios.post("http://localhost:5000/project", formData)
             .then((response) => {
-                console.log(response.data.html)
-                const temp = response.data.html
+                console.log(response.data.html_code)
+                const temp = response.data.html_code
                 this.setState({html : temp})
             }).catch((error) => {
                 console.log(error)

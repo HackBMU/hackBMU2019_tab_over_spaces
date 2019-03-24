@@ -56,7 +56,17 @@ def dash():
 @app.route('/deploy/<project_id>', methods=['GET'])
 def deploy(project_id):
     project = Projects.get_project_by_id(project_id)
-    return render_template(project.html_code)
+    return project.html_code
+
+
+@app.route('/html/<id>', methods=['POST'])
+def change_html(id):
+    project = Projects.get_project_by_id(id)
+    project.html_code = request.form.get('html_code')
+    db.session.add(project)
+    db.session.commit()
+    return get_project(id)
+
 
 @app.route('/output/<path:path>')
 def generated(path):

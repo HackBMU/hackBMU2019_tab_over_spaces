@@ -6,7 +6,7 @@ from keras import backend as K
 
 
 @app.route('/project', methods=['GET', 'POST'])
-def generate(model_name):
+def generate():
     if request.method == 'POST':
         project_name = request.form.get('project_name')
         style = request.form.get('style')

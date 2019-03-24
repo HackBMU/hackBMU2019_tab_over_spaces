@@ -39,7 +39,7 @@ const axios = require("axios");
     onFormSubmit = () => {
       const formData = new FormData();
         formData.append('html_code', this.state.model);
-         axios.post(`http://localhost:5000/html/${this.state.userId}/`, formData)
+         axios.post(`http://localhost:5000/html/${this.state.userId}`, formData)
             .then((response) => {
                 console.log(response)
             }).catch((error) => {
@@ -53,12 +53,13 @@ const axios = require("axios");
       return (
             
           <div>
+          <button onClick={this.onFormSubmit} type="submit">Save</button>
               <FroalaEditor
                 tag='textarea'
                 model={this.state.model}
                 onModelChange={this.handleModelChange}
             />
-             <button onClick={this.onFormSubmit} type="submit">Save</button>
+             
           </div>
       )
     }

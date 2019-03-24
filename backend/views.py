@@ -34,7 +34,7 @@ def generate():
             html = model.convert_single_image(output_folder, png_path=file_address, print_generated_output=0, get_sentence_bleu=0, original_gui_filepath=None, style=style)
             project = Projects.get_project_by_id(project_id)
             project.html_code = html
-            project.deploy_url = f'localhost:5000/deploy/{project_id}'
+            project.deploy_url = f'http://localhost:5000/deploy/{project_id}'
             db.session.add(project)
             db.session.commit()
             K.clear_session()
